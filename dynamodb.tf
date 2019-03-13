@@ -1,5 +1,5 @@
 resource "aws_dynamodb_table" "basic-dynamodb-table" {
-  name           = "${var.organization}-${var.appenvironment}-GameScores"
+  name           = "${var.org}-${var.environment}-${var.application_name}"
   billing_mode   = "PROVISIONED"
   read_capacity  = 1
   write_capacity = 1
@@ -22,7 +22,7 @@ resource "aws_dynamodb_table" "basic-dynamodb-table" {
   }
 
   tags = {
-    Name        = "${var.organization}-dynamodb-table-1"
+    Name        = "${var.org}-dynamodb-table-1"
     Environment = "production"
   }
 }

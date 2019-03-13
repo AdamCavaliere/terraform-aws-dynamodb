@@ -1,9 +1,11 @@
-variable "organization" {
-  default     = "${var.org}"
-  description = "Terraform Enterprise Organization - the default assumes this variable is already set on your workspace"
+variable "org" {
+  description = "Terraform Enterprise Organization - var.org is already set on workspace"
 }
 
-variable "appenvironment" {
-  default     = "${var.environment}"
-  description = "This is the application environment (dev, stage, prod) - the default assumes this variable is already set on your workspace"
+variable "environment" {
+  description = "This is the application environment (dev, stage, prod) - var.environment is already set on workspace"
+}
+
+variable "application_name" {
+  description = "Unique Name of the application"
 }
